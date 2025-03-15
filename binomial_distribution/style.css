@@ -11,6 +11,7 @@ article button{
     padding: 10px;
     cursor: pointer;
     vertical-align: middle;
+    color: var(--font);
 }
 article input, article select, article textarea {
     padding: 5px;
