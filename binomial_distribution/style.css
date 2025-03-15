@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 article button, article input, article select, article textarea {
-    background-color: var(--b-5);
+    background-color: var(--back);
     border: 1px solid var(--b-0);
     border-radius: 5px;
     line-height: 1em;
