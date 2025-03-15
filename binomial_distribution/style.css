@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+article button, article input, article select, article textarea {
+    background-color: var(--b-5);
+    border: 1px solid var(--b-0);
+    border-radius: 5px;
+    line-height: 1em;
+    font-size: 1em;
+}
+article button{
+    padding: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+article input, article select, article textarea {
+    padding: 5px;
+}
+article button .material-symbols-outlined{
+    vertical-align: bottom;
+    font-size: 1.2em;
+    line-height: 0.8em;
+    margin-right: 0.2em;
+}
+#binomial-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+#binomial-form label{
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+#binomial-form input{
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    width: 10rem;
+}
+#binomial-result{
+    margin-top: 5rem;
+}
+#binomial-result-table table,tbody{
+    width: 100%;
+}
+#binomial-result-table td,#binomial-result-table th{
+    padding: 0.5em;
+    text-align: left;
+    vertical-align: middle;
+}
+#binomial-result-chart{
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+}

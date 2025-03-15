@@ -11,12 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode,search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://kelpoftruth.com/articles/assets/css/style.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/go.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js" integrity="sha512-PbOEC/cOHBQKshG/XgYoI+kff08IraowCgPlDT8NL91+ZPaeuvWVtC7jYTDua9Kow5QTpX+EMIM0RBKAA2Hsmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"rel="stylesheet"/> -->
+    <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> -->
 </head>
 <div id="scrollbar">
     <div id="scrolltrack"></div>
@@ -61,7 +65,45 @@
     </header>
     <main>
         <article>
-            
+            <h1>二項分布計算ツール</h1>
+            <form id="binomial-form" action="https://kelpoftruth.com/tools/binomial_distribution">
+                <div>
+                    <label for="n">n&nbsp;=&nbsp;</label
+                    ><input name="n" id="n" type="number" value="100" min="0" required><span></span>
+                </div>
+                <div>
+                    <label for="p">p&nbsp;=&nbsp;</label
+                    ><input name="p" id="p" type="number" value="0.01" min="0" max="1" required step="any">
+                </div>
+                <div>
+                    <button type="submit" id="calc"><span class="material-symbols-outlined">function</span>計算</button>
+                </div>
+            </form>
+            <div id="binomial-result">
+                <div class="check-figure">
+                    <p>
+                        <span style="font-size: 1.2rem;"><b>期待値</b></span><br>
+                        np&nbsp;=&nbsp;<span id="expected-value"></span>
+                    </p>
+                </div>
+                <div id="binomial-result-chart">
+                    <div class="b-div">
+                        <canvas id="myBarChart"></canvas>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+                    </div>
+                </div>
+                <div id="binomial-result-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="padding-right: 5em;">k</th>
+                                <th style="width: 100%;">P(x=k)</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
         </article>
         <footer>
             Email address : <a href="mailto:kelpoftruth@gmail.com">kelpoftruth@gmail.com</a><br>
@@ -86,5 +128,6 @@
         </footer>
     </main>
 </body>
+<script src="./script.js"></script>
 <script src="https://kelpoftruth.com/articles/assets/js/script.js"></script>
 </html>
