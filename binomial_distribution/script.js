@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
     }
     var chart_data=[];
     var chart_labels=[];
-    document.querySelector("#expected-value").innerHTML=`${n*p}`;
+    document.querySelector("#expected-value").innerHTML=String(JSON.parse(math.evaluate(`${n}*${p}`)));
     for(k = 0; k <= n; k++) {
         var res=math.evaluate(binomialDistribution(n, k, p));
         var res2=res.d.join("");
