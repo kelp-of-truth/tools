@@ -1,21 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
-article button, article input, article select, article textarea {
+/* article button, article input, article select, article textarea {
     background-color: var(--back);
     border: 1px solid var(--b-0);
     border-radius: 5px;
     line-height: 1em;
     font-size: 1em;
-}
+} */
 article button{
-    padding: 10px;
-    cursor: pointer;
+/*     padding: 10px; */
+/*     cursor: pointer; */
     vertical-align: middle;
-    color: var(--font);
+/*     color: var(--font); */
 }
-article input, article select, article textarea {
+/* article input, article select, article textarea {
     padding: 5px;
-}
+} */
 article button .material-symbols-outlined{
     vertical-align: bottom;
     font-size: 1.2em;
@@ -32,11 +32,11 @@ article button .material-symbols-outlined{
     font-size: 1.2em;
     margin-right: 0.5em;
 }
-#binomial-form input{
+/* #binomial-form input{
     font-size: 0.9rem;
     padding: 0.5rem;
     width: 10rem;
-}
+} */
 #binomial-result{
     margin-top: 5rem;
 }
