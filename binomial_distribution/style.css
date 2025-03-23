@@ -32,11 +32,11 @@ article button .material-symbols-outlined{
     font-size: 1.2em;
     margin-right: 0.5em;
 }
-/* #binomial-form input{
-    font-size: 0.9rem;
-    padding: 0.5rem;
+#binomial-form input{
+/*     font-size: 0.9rem;
+    padding: 0.5rem; */
     width: 10rem;
-} */
+}
 #binomial-result{
     margin-top: 5rem;
 }
