@@ -1,0 +1,36 @@
+@charset "utf-8";
+@font-face {
+    font-family: "IBMPlexJP";
+    src: url("https://kelpoftruth.com/IBMPlexSansJP-Regular.woff2") format("woff2");
+}
+/* CSS Document */
+html,body{
+    padding: 0;
+    margin: 0;
+}
+html,body,input,button,select,textarea{
+    font-family: "IBMPlexJP", sans-serif;
+}
+main{
+    display: block;
+    min-height: 100svh;
+    width: 50svw;
+    padding: 24px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    margin-left: calc(25svw);
+}
+@media screen and (max-width: 600px) {
+    main{
+        width: 100svw;
+        margin-left: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+}
+main h1{
+    text-align: center;
+    /* line-height: 2em; */
+    margin-bottom: 2em;
+}
