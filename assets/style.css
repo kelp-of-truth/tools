@@ -8,7 +8,7 @@ html,body{
     padding: 0;
     margin: 0;
 }
-html,body,input,button,select,textarea{
+html,body,input,button,select,textarea,math{
     font-family: "IBMPlexJP", sans-serif;
 }
 main{
