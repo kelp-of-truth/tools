@@ -39,7 +39,15 @@ window.addEventListener("load", () => {
     }
     var chart_data=[];
     var chart_labels=[];
-    document.querySelector("#expected-value").innerHTML=String(JSON.parse(math.evaluate(`${n}*${p}`)));
+
+    const expectation=JSON.parse(math.evaluate(`${n}*${p}`));
+    const variance=JSON.parse(math.evaluate(`${n}*${p}*${1-p}`));
+    const standard_deviation=JSON.parse(math.evaluate(`sqrt(${variance})`));
+
+    document.querySelector("#expectation").innerHTML=String(expectation);
+    document.querySelector("#variance").innerHTML=String(variance);
+    document.querySelector("#standard_deviation").innerHTML=String(standard_deviation);
+
     for(k = 0; k <= n; k++) {
         var res=math.evaluate(binomialDistribution(n, k, p));
         var res2=res.d.join("");
@@ -48,16 +56,12 @@ window.addEventListener("load", () => {
         chart_data.push(Number(res2));
         chart_labels.push(k);
     }
-    document.querySelector("#binomial-result-table table tbody").innerHTML=data.data.map((e)=>`<tr><td>${e[0]}</td><td>${e[1]}</td></tr>`).join("");
+    document.querySelector("table tbody").innerHTML=data.data.map((e)=>`<tr><td>${e[0]}</td><td>${e[1]}</td></tr>`).join("");
 
     createChart([chart_labels,chart_data]);
-
-    setTimeout(() => {
-        track.style.height=`${window.innerHeight**2/document.body.clientHeight-10}px`;
-        scrollbar();
-    }, 500);
 })
 function createChart(data){
+    console.log(data)
     var ctx = document.getElementById("myBarChart");
     var myBarChart = new Chart(ctx, {
         type: 'bar',
