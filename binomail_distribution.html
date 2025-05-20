@@ -1,0 +1,53 @@
+<h1>Binomial Distribution</h1>
+        <form class="mb-5">
+            <div class="row g-3 mb-3">
+                    <div class="input-group col">
+                        <span class="input-group-text">n</span>
+                        <input type="number" id="n" class="form-control">
+                    </div>
+                    <label class="col-form-label col">(n &gt; 0)</label>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="input-group col">
+                        <span class="input-group-text">p</span>
+                        <input type="number" id="p" class="form-control">
+                    </div>
+                    <label class="col-form-label col">(0 &le; n &le; 1)</label>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-calculator me-1"></i><span class="">Calculate</span></button>
+            </div>
+        </form>
+        <div class="mb-4">
+            E(B(n,p)) = <span id="mean"></span><br>
+            &sigma;(B(n,p)) = <span id="variance"></span>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">k</th>
+                    <th scope="col">P(X=k)</th>
+                    <th scope="col">P(X&le;k)</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0.01477574</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0.6249556</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>0.1854059</td>
+                    </tr>
+                </tbody>
+            </thead>
+            <tbody id="result">
+                <!-- Result will be inserted here -->
+            </tbody>
+                </tr>
+            </thead>
+        </table>
+
+      
