@@ -27,3 +27,20 @@ layout: default
   </div>
   <button type="submit" class=" btn-secondary btn">Open</button>
 </form>
+<script>
+  document.querySelector("form").addEventListener("submit",(e)=>{
+  e.preventDefault();
+  const uri=`https://${document.querySelector("#uri").value}`;
+  const params=`
+    width=420,
+    height=${window.outerHeight},
+    top=0,
+    left=${window.innerWidth/2-210},
+    menubar=${Boolean(document.querySelector("#menubar").checked)?"yes":"no"},
+    toolbar=${Boolean(document.querySelector("#toolbar").checked)?"yes":"no"},
+    location=${Boolean(document.querySelector("#location").checked)?"yes":"no"}
+  `
+  console.log(params);
+  window.open(uri,`popup window - ${uri}`,params);
+})
+</script>
