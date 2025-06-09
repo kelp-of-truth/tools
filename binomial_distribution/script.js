@@ -4,15 +4,19 @@ math.config({
     relTol: 1e-512,
     absTol: 1e-512
 })
+let mem=1;
 function binomialCoefficient(n, k) {
-    let a="1";
-    let b="1";
-    for(var i=0;i<k;i++){
-        a=`${a}*${n-i}`;
-        b=`${b}*${i+1}`;
+    let a=1;
+    let b=1;
+    
+    if(k!==0){
+        a=`(${a}*${n-(k-1)})`;
+        b=`(${b}*${k})`;
     }
-
-    const res=`(${a})/(${b})`;
+    const res=`(${mem})*(${a})/(${b})`;
+    mem=res;
+    // mem*=(`${n-i}/${k+1}`);
+    // const res;
     return res;
 }
 
